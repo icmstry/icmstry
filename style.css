@@ -4,6 +4,10 @@ html, *, body {
     margin: 0;
 
 }
+html, body {
+    overflow-x: hidden;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -180,6 +184,7 @@ body {
     margin-top: auto;
 }
 
+
 .tujuan {
     padding: 20px;
     color: rgb(248, 248, 248);
@@ -189,13 +194,13 @@ body {
     margin-top: 30px;
     align-items: center;
     opacity: 0;
-    transform: translateX(50px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
+    transform: translateX(50px); /* Mulai dari posisi di luar layar (kanan) */
+    transition: opacity 1s ease-out, transform 1s ease-out; /* Transisi yang mulus */
 }
 
 .tujuan.fade-in {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0); /* Kembali ke posisi semula (di dalam layar) */
 }
 
 
