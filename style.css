@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+html, *, body {
+    padding: 0;
+    margin: 0;
+
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Kanit", sans-serif;
+    /* background-color: #191919; */
+    /* overflow: hidden; */
+}
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('img/walp.jpg'); 
+    background-repeat: repeat-y;
+    background-size: cover;
+    background-attachment: fixed;
+    filter: brightness(30%); 
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #111;
+    padding: 20px;
+    position: fixed;
+    z-index: 7;
+    opacity: 85%;
+    width: 100%;
+}
+.navbar .logo{
+    font-size: 20px;
+    font-weight: 600;
+    word-spacing: 2%;
+    color: rgb(248, 248, 248);
+    margin-left: 10px;
+    
+}
+
+#menu-toggle {
+    color: rgb(248, 248, 248);
+    font-size: 28px;
+    cursor: pointer;
+    margin-right: 39px;
+}
+
+.butnav {
+    position: fixed;
+    top: -200px; /* ilangin dlu dri layar(tarok di pocok) */
+    width: 100%;
+    background-color: #111;
+    transition: top 0.3s ease; /* kasih transisi ygy */
+    /* text-align: center; */
+    opacity: 85%;
+    z-index: 1;
+}
+
+.butnav ul {
+    /* padding: 0; */
+    margin: 15px 0;
+    margin-left: 10px;
+    list-style: none;
+    padding: 0px 20px;
+}
+.butnav ul li{
+    margin: 12px 0px;
+}
+.butnav ul li a {
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 200;
+}
+
+.foto {
+    position: relative;
+    text-align: center;
+    color: white; 
+}
+
+.foto img {
+    width: 100%;
+    filter: brightness(30%);
+    transition: transform 0.8s ease-in-out;
+    box-shadow: 0 0 10px #111;
+}
+.foto.scrolled-up img {
+    transform: translateY(10px);
+}
+
+.foto.scrolled-down img {
+    transform: translateY(-10px);
+}
+
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Poppins", sans-serif;
+    width: 80%;
+
+}
+.text-overlay p{
+    font-size: 15px;
+    text-shadow: 0 0 10px #111;
+
+}
+.text-overlay h1 {
+    font-size: 25px;
+    text-shadow: 0 0 10px #111;
+}
+.text-overlay .polsri {
+    color: gold;
+    text-shadow: 0 0 10px #111;
+}
+
+.ttgkami {
+    padding: 20px;
+    color: rgb(248, 248, 248);
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(-50px); 
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.ttgkami.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.ttgkami p {
+    font-size: 15px;
+    text-align: center;
+    /* word-spacing: 10px; */
+    margin-right: 10px;
+}
+.ttgkami img{
+    width: 80%;
+    height: fit-content;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #111;
+}
+.ttgkami h1{
+    font-weight: 200;
+}
+/* .ttgkami img:hover{
+    transform: scale(1.06);
+    transform: .4s;
+} */
+.spacekosong{
+    width: 20px;
+    margin: 40% 0px;
+}
+
+.copyright {
+    width: 100%;
+    background-color: #111;
+    color: rgb(248, 248, 248);
+    font-weight: 200;
+    text-align: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    margin-top: auto;
+}
+
+.tujuan {
+    padding: 20px;
+    color: rgb(248, 248, 248);
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    align-items: center;
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.tujuan.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.tujuan p {
+    font-size: 15px;
+    text-align: center;
+    /* word-spacing: 10px; */
+    margin-right: 10px;
+}
+.tujuan img{
+    width: 80%;
+    height: fit-content;
+    margin-right: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px #111;
+}
+.tujuan h1{
+    font-weight: 200;
+}
